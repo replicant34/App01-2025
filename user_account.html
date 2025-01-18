@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">My Account</h2>
+                <button class="toggle-button" onclick="toggleSidebar()">☰</button>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="sidebar-button active" onclick="showSection('history')">
+                    <i class="fas fa-history"></i> 
+                    <span class="button-text">History of Orders</span>
+                </button>
+                <button class="sidebar-button" onclick="showSection('new-order')">
+                    <i class="fas fa-plus"></i> 
+                    <span class="button-text">New Order</span>
+                </button>
+                <button class="sidebar-button" onclick="showSection('documents')">
+                    <i class="fas fa-file-alt"></i> 
+                    <span class="button-text">Documents</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="history" class="content-section active">
+                <h1>History of Orders</h1>
+                <p>Your previous orders will be displayed here.</p>
+            </div>
+            <div id="new-order" class="content-section">
+                <h1>New Order</h1>
+                <p>Please fill out the form below to place a new order.</p>
+                <form id="new-order-form">
+                    <!-- Input fields -->
+                    <div class="form-group">
+                        <label for="input1">Input 1:</label>
+                        <input type="text" id="input1" name="input1" placeholder="Enter value 1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input2">Input 2:</label>
+                        <input type="text" id="input2" name="input2" placeholder="Enter value 2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input3">Input 3:</label>
+                        <input type="text" id="input3" name="input3" placeholder="Enter value 3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input4">Input 4:</label>
+                        <input type="text" id="input4" name="input4" placeholder="Enter value 4" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input5">Input 5:</label>
+                        <input type="text" id="input5" name="input5" placeholder="Enter value 5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input6">Input 6:</label>
+                        <input type="text" id="input6" name="input6" placeholder="Enter value 6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input7">Input 7:</label>
+                        <input type="text" id="input7" name="input7" placeholder="Enter value 7" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input8">Input 8:</label>
+                        <input type="text" id="input8" name="input8" placeholder="Enter value 8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input9">Input 9:</label>
+                        <input type="text" id="input9" name="input9" placeholder="Enter value 9" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input10">Input 10:</label>
+                        <input type="text" id="input10" name="input10" placeholder="Enter value 10" required>
+                    </div>
+            
+                    <!-- Submit button -->
+                    <button type="submit" class="form-submit-button">Submit Order</button>
+                </form>
+            </div>            
+            <div id="documents" class="content-section">
+                <h1>Documents</h1>
+                <p>Your documents will be shown here.</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
