@@ -5,7 +5,7 @@
         <span class="username" id="username"><?= $user['first_name'] . ' ' . $user['last_name'] ?></span>
     </div>
        <nav class="sidebarnav" id="sidebarnav">
-       <button class="sidebarbutton" id="sidebarbutton" onclick="showSection('history')">
+       <button class="sidebarbutton" id="sidebarbutton" onclick="redirectToDashboard()">
             <i class="fas fa-dashboard"></i> 
             <span class="buttontext" >Dashboard</span>
         </button>
@@ -41,5 +41,11 @@
     // Redirect function for Add User button
     function redirectToManageUsers() {
         window.location.href = 'user-manage.php';
+    }
+</script>
+<script>
+    // Redirect function for Add User button
+    function redirectToDashboard() {
+        window.location.href = 'dashboard.php';
     }
 </script>
