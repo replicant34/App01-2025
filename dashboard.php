@@ -49,41 +49,8 @@
             </div>
         </main>
     </div>
-<script>
-   var sideBarIsOpen = true;
-    // Add event listener
-    toggleBtn.addEventListener('click', (event) => {
-        event.preventDefault();
 
-        if(sideBarIsOpen){
-            sidebar.style.width = '70px';
-            sidebar.style.transition = '0.3s all';
-            navigationcontainer.style.left = '6%';
-            headerlogo.style.width = '70px';
-            sidebartitle.style.fontSize = '14px';
-            username.style.fontSize = '12px';
-            
-            buttontexts = document.getElementsByClassName('buttontext');
-            for(var i=0; i < buttontexts.length; i++){
-                buttontexts[i].style.display = 'none';
-            }
-            sideBarIsOpen = false;
-        } else {
-            sidebar.style.width = '250px';
-            navigationcontainer.style.left = '15%';
-            headerlogo.style.width = '100px';
-            sidebartitle.style.fontSize = '24px';
-            username.style.fontSize = '18px';
-            
-            
-            buttontexts = document.getElementsByClassName('buttontext');
-            for(var i=0; i < buttontexts.length; i++){
-                buttontexts[i].style.display = 'inline-block';
-            }
-            sideBarIsOpen = true;
-        }
-    });
-</script>
+<script src="./js/sideBar.js"> </script>
 
 </body>
 </html>
