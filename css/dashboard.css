@@ -59,7 +59,7 @@ body {
 }
 
 .sidebar.collapsed {
-    width: 70px;
+    width: 100px;
 }
 
 .sidebar-header {
@@ -250,10 +250,23 @@ p.responseMessage_error {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+}
+
+/* General button styles */
+.table-container a {
+    display: inline-block; /* Ensure the buttons stay inline */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease;
+    margin-right: 5px; /* Space between buttons */
 }
 
 .table-container h2 {
@@ -263,7 +276,7 @@ p.responseMessage_error {
 }
 
 table {
-    width: 100%;
+    width: 100% ;
     border-collapse: collapse;
 }
 
@@ -299,49 +312,37 @@ tr:hover {
     font-size: 14px;
 }
 
-.action-buttons .edit-button {
-    background-color: #1abc9c;
-    color: white;
+/* Edit button styles */
+.table-container a.edit {
+    background-color: #75b0f0; /* Blue */
+    border: 2px solid #000000;
 }
 
-.action-buttons .edit-button:hover {
-    background-color: #16a085;
+.table-container a.edit:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+/* Add some spacing to the action buttons */
+.table-container td {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap
+    
 }
 
-.action-buttons .delete-button {
-    background-color: #e74c3c;
-    color: white;
+.table-container td a i {
+    margin-right: 5px;
 }
 
-.action-buttons .delete-button:hover {
-    background-color: #c0392b;
+/* Delete button styles */
+.table-container a.deleteUser {
+    background-color: #dc3545; /* Red */
+    border: 1px solid #a71d2a;
 }
 
-/* Pagination */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.pagination a {
-    margin: 0 5px;
-    padding: 8px 12px;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #34495e;
-}
-
-.pagination a:hover {
-    background-color: #34495e;
-    color: white;
-}
-
-.pagination a.active {
-    background-color: #1abc9c;
-    color: white;
-    pointer-events: none;
+.table-container a.deleteUser:hover {
+    background-color: #a71d2a;
+    color: #fff;
 }
 
 p.userCount {
@@ -351,3 +352,38 @@ p.userCount {
     text-transform: uppercase;
     color: #333;
 }
+
+/* Pagination Controls */
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: #0056b3;
+}
+
+.pagination-button.active {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .table-container a {
+        display: inline-block;
+        margin-bottom: 5px; /* Add spacing between buttons on smaller screens */
+    }
+}
+
