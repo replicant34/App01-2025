@@ -6,12 +6,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #74ebd5, #9face6);
+    background-attachment: fixed;
+}
+
+.page-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: transparent;
 }
 
 /* Logout Button Styles */
@@ -119,7 +123,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
 .sidebarbutton:hover {
     background-color: #1abc9c;
 }
@@ -140,8 +143,6 @@ body {
     margin-bottom: 10px;
     margin-right: 10px;
 }
-
-
 
 /* Login Container */
 .login-container {
@@ -385,5 +386,225 @@ p.userCount {
         display: inline-block;
         margin-bottom: 5px; /* Add spacing between buttons on smaller screens */
     }
+}
+
+.sidebarbutton.sub-button {
+    margin-left: 20px;
+    font-size: 14px;
+    background-color: #2c3e50;
+    padding: 8px 15px;
+}
+
+.sidebarbutton.sub-button:hover {
+    background-color: #16a085;
+}
+
+.sub-buttons {
+    transition: all 0.3s ease;
+}
+
+.sub-buttons .sidebarbutton.sub-button {
+    margin-left: 20px;
+    font-size: 14px;
+    background-color: #2c3e50;
+    padding: 8px 15px;
+}
+
+.sub-buttons .sidebarbutton.sub-button:hover {
+    background-color: #16a085;
+}
+
+/* Order Form Styles */
+.order-form {
+    max-width: 1000px; /* Increased from 800px */
+    margin: 20px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Header Styles */
+.content-section h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content-section p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px; /* Increased from 20px */
+    margin-bottom: 20px; /* Increased from 15px */
+}
+
+.form-group {
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.form-group.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+    min-height: 80px;
+    max-height: 200px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Form Submit Button */
+.form-submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-submit-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific form styles with improved colors */
+.order-form.international {
+    border-top: 5px solid #3498db;
+}
+
+.order-form.international .form-submit-button {
+    background-color: #3498db;
+}
+
+.order-form.international .form-submit-button:hover {
+    background-color: #2980b9;
+}
+
+.order-form.express {
+    border-top: 5px solid #e74c3c;
+}
+
+.order-form.express .form-submit-button {
+    background-color: #e74c3c;
+}
+
+.order-form.express .form-submit-button:hover {
+    background-color: #c0392b;
+}
+
+.order-form.domestic {
+    border-top: 5px solid #2ecc71;
+}
+
+.order-form.domestic .form-submit-button {
+    background-color: #2ecc71;
+}
+
+.order-form.domestic .form-submit-button:hover {
+    background-color: #27ae60;
+}
+
+/* Input field hover effects */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #bdc3c7;
+}
+
+/* Select dropdown styling */
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-form {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .content-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+
+    .form-submit-button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+/* Additional spacing for main content */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Form section spacing */
+.content-section {
+    padding: 20px 0;
 }
 
