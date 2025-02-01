@@ -1,5 +1,4 @@
 
-
 var sideBarIsOpen = true;
 
 // Add event listener for sidebar toggle
@@ -17,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sideBarIsOpen) {
             sidebar.style.width = '100px';
             sidebar.style.transition = '0.3s all';
-            navigationContainer.style.left = '6%';
+            navigationContainer.style.left = '8%';
             headerLogo.style.width = '70px';
             sidebarTitle.style.fontSize = '14px';
             username.style.fontSize = '12px';
@@ -42,3 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+
+
