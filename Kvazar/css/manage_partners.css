@@ -1,0 +1,628 @@
+/* Container Styles */
+.container {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-header h2 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Column Settings */
+.column-settings {
+    display: none;
+}
+
+/* Search and Filters */
+.filters-section {
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 35px 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filters select,
+.filters input {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 180px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    color: #6c757d;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.tab-btn:hover {
+    color: #3498db;
+    background-color: #f8f9fa;
+}
+
+.tab-btn.active {
+    color: #3498db;
+    background-color: #e3f2fd;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 60px; /* Space for fixed footer */
+}
+
+#partnersTable {
+    min-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* This helps control column widths */
+}
+
+/* Column width classes */
+#partnersTable th,
+#partnersTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Status column */
+#partnersTable th:nth-child(1),
+#partnersTable td:nth-child(1) {
+    width: 120px;
+}
+
+/* Company type column */
+#partnersTable th:nth-child(2),
+#partnersTable td:nth-child(2) {
+    width: 150px;
+}
+
+/* Full name column */
+#partnersTable th:nth-child(3),
+#partnersTable td:nth-child(3) {
+    width: 250px;
+}
+
+/* Short name column */
+#partnersTable th:nth-child(4),
+#partnersTable td:nth-child(4) {
+    width: 180px;
+}
+
+/* Contracts column */
+#partnersTable th:nth-child(5),
+#partnersTable td:nth-child(5) {
+    width: 120px;
+}
+
+/* INN column */
+#partnersTable th:nth-child(6),
+#partnersTable td:nth-child(6) {
+    width: 120px;
+}
+
+/* KPP column */
+#partnersTable th:nth-child(7),
+#partnersTable td:nth-child(7) {
+    width: 120px;
+}
+
+/* OGRN column */
+#partnersTable th:nth-child(8),
+#partnersTable td:nth-child(8) {
+    width: 150px;
+}
+
+/* Address columns */
+#partnersTable th:nth-child(9),
+#partnersTable td:nth-child(9),
+#partnersTable th:nth-child(10),
+#partnersTable td:nth-child(10) {
+    width: 200px;
+}
+
+/* Bank info columns */
+#partnersTable th:nth-child(11),
+#partnersTable td:nth-child(11) {
+    width: 180px; /* Bank name */
+}
+
+#partnersTable th:nth-child(12),
+#partnersTable td:nth-child(12) {
+    width: 100px; /* BIK */
+}
+
+#partnersTable th:nth-child(13),
+#partnersTable td:nth-child(13),
+#partnersTable th:nth-child(14),
+#partnersTable td:nth-child(14) {
+    width: 180px; /* Account numbers */
+}
+
+/* Contact info columns */
+#partnersTable th:nth-child(15),
+#partnersTable td:nth-child(15),
+#partnersTable th:nth-child(16),
+#partnersTable td:nth-child(16) {
+    width: 180px; /* Contact person and position */
+}
+
+#partnersTable th:nth-child(17),
+#partnersTable td:nth-child(17) {
+    width: 150px; /* Phone */
+}
+
+#partnersTable th:nth-child(18),
+#partnersTable td:nth-child(18) {
+    width: 200px; /* Email */
+}
+
+/* Head info columns */
+#partnersTable th:nth-child(19),
+#partnersTable td:nth-child(19),
+#partnersTable th:nth-child(20),
+#partnersTable td:nth-child(20) {
+    width: 180px; /* Head position and name */
+}
+
+/* Actions column - always last */
+#partnersTable th:last-child,
+#partnersTable td:last-child {
+    position: sticky;
+    right: 0;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    width: 80px;  /* Reduced from 120px since we only have one button now */
+    z-index: 1;
+}
+
+/* Add hover effect to show full content */
+#partnersTable td {
+    position: relative;
+}
+
+#partnersTable td:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    white-space: normal;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+/* Add horizontal scroll indicator */
+.table-container::after {
+    content: '→';
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    background: rgba(52, 152, 219, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    display: none;
+}
+
+.table-container.scrollable::after {
+    display: block;
+}
+
+/* Status Dot */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+/* Column Settings Modal */
+#columnCheckboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.checkbox-item:hover {
+    border-color: #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: #3498db;
+}
+
+.checkbox-item label {
+    font-size: 14px;
+    color: #2c3e50;
+    cursor: pointer;
+    user-select: none;
+    flex: 1;
+}
+
+/* Make the column settings modal wider */
+#columnSettingsModal .modal-content {
+    max-width: 800px;
+    width: 90%;
+}
+
+#columnSettingsModal h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Improve modal buttons */
+#columnSettingsModal .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+#columnSettingsModal .modal-buttons button {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#columnSettingsModal .modal-buttons button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Scrollbar styling for the checkboxes container */
+#columnCheckboxes::-webkit-scrollbar {
+    width: 8px;
+}
+
+#columnCheckboxes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#columnCheckboxes::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#columnCheckboxes::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Footer Buttons */
+.content-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 250px);
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.footer-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.footer-buttons button:hover {
+    background: #e9ecef;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.footer-buttons button i {
+    font-size: 16px;
+    color: #3498db;
+}
+
+/* Edit Form Styles */
+.edit-form {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.form-column h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+    outline: none;
+}
+
+/* Modal Improvements */
+.modal-content {
+    max-width: 1000px;  /* Wider modal for the edit form */
+    max-height: 90vh;   /* Limit height and enable scrolling */
+    overflow-y: auto;
+    padding: 25px;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #95a5a6;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Status Select Styling */
+#editStatus option {
+    padding: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    .form-column {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .form-column {
+        flex: 1 1 100%;
+    }
+
+    .modal-content {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+/* Add these styles */
+.actions-column {
+    white-space: nowrap;
+    width: 1%;  /* This makes the column as narrow as possible */
+}
+
+.actions-column button {
+    margin: 0 2px;
+}
+
+/* Add these styles */
+.status-btn {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.status-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.status-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.status-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.status-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.status-option .status-dot {
+    margin-right: 8px;
+} 
